@@ -5,6 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --light-surface-content-title-gradient: linear-gradient(85deg, #fff 0%, rgba(255, 255, 255, .5) 92.15%);
+  --color-top-light-17: rgba(255, 255, 255, 0.17);
+  --color-top-dark-83: rgba(0, 0, 0, 0.75);
+  --color-top-light-2: rgba(255, 255, 255, .02);
+  --color-border-df: rgba(255, 255, 255, .05);
+  --color-content-secondary: rgba(238, 237, 238, .87);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -114,7 +120,30 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.274 0.006 286.033);
   --sidebar-ring: oklch(0.442 0.017 285.786);
+  
 }
+
+.gradient-heading {
+  font-family: var(--font-roboto-flex), sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(29px, 4.5vw, 104px) !important;
+  font-weight: 1000;
+  line-height: clamp(29px, 4.5vw, 104px) !important;
+  background: linear-gradient(85deg, #fff 0%, rgba(255, 255, 255, .5) 92.15%);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+@layer utilities {
+  .font-wide {
+    font-variation-settings: "wdth" 153, "GRAD" 150, "slnt" 0,
+      "XTRA" 603, "XOPQ" 96, "YOPQ" 79,
+      "YTLC" 514, "YTUC" 712, "YTAS" 750,
+      "YTDE" -203, "YTFI" 738;
+  }
+}
+
 
 @layer base {
   * {
