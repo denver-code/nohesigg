@@ -21,7 +21,7 @@ import { Switch } from "@/components/ui/switch"
 export function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-8 p-2 flex flex-col gap-1">
-      <div className="sticky bg-top-dark-83 backdrop-blur-16 border border-gray-900 xl:mx-9 xl:mt-5 rounded-xl flex items-center justify-between p-2 my-2 container-selection">
+      <div className="sticky bg-top-dark-83 backdrop-blur-md border border-gray-900 xl:mx-9 xl:mt-5 rounded-xl flex items-center justify-between p-2 my-2 container-selection">
         <div className="flex items-center lg:gap-2 xl:gap-4 2xl:gap-6">
           <Link href="/" className="flex items-center gap-2 bg-white/5 p-2 px-4 rounded-md">
           <img src="/NoHesiLogo.svg" alt="No Hesi" className="h-5" />
