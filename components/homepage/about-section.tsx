@@ -1,19 +1,32 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
+
 export function AboutSection() {
+  const textColorMap = {
+    green: "text-green-400",
+    yellow: "text-yellow-300",
+    red: "text-red-500",
+  };
+
+  const shadowColorMap = {
+    green: "shadow-green-400/50",
+    yellow: "shadow-yellow-300/50",
+    red: "shadow-red-500/50",
+  };
+
   return (
-    <section className="container mx-auto px-4 py-20" id="about">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-0">
+    <section className="container mx-auto py-20 px-3" id="about">
+      <div className="flex flex-col justify-center items-start sm:flex-row sm:justify-between mb-12">
+        <h2 className="gradient-heading !text-left !capitalize !font-semibold pb-4 md:pb-0">
           No Hesi is a<br />
           Global Community
         </h2>
-        <Button asChild variant="outline">
+        <Button asChild variant="outline" className="italic border border-white px-6 py-7 text-lg font-bold">
           <Link href="/about">READ ABOUT US</Link>
         </Button>
       </div>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
         {[
           {
             title: "WORLDWIDE INFLUENCE",
@@ -39,10 +52,12 @@ export function AboutSection() {
         ].map((item, index) => (
           <div
             key={index}
-            className={`p-6 border border-gray-800 rounded-xl hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:shadow-${item.color}`}
+            // @ts-ignore
+            className={`p-6 border border-gray-800 rounded-xl hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:shadow-sm ${shadowColorMap[item.color]}`}
           >
             <img src={item.icon || "/placeholder.svg"} alt={item.title} className="mb-8" />
-            <h3 className={`text-${item.color}-500 text-xl font-bold mb-4`}>{item.title}</h3>
+            {/* @ts-ignore */}
+            <h3 className={`${textColorMap[item.color]} text-xl md:text-2xl xl:text-4xl font-wide font-[1000] mb-4`}>{item.title}</h3>
             <p className="text-gray-400">{item.description}</p>
           </div>
         ))}

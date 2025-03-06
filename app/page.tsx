@@ -11,11 +11,11 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden bg-black text-white">
       <NavBar />
       <HeroSection />
-      {/* <AboutSection />
-      <ServersSection />
-      <PlansSection />
-      <ContactSection />
-      <Footer /> */}
+      <AboutSection />
+      {/* <ServersSection /> */}
+      {/* <PlansSection /> */}
+      {/* <ContactSection /> */}
+      {/* <Footer /> */}
     </div>
   )
 }

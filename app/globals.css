@@ -123,17 +123,7 @@
   
 }
 
-.gradient-heading {
-  font-family: var(--font-roboto-flex), sans-serif;
-  text-transform: uppercase;
-  font-size: clamp(29px, 4.5vw, 104px) !important;
-  font-weight: 1000;
-  line-height: clamp(29px, 4.5vw, 104px) !important;
-  background: linear-gradient(85deg, #fff 0%, rgba(255, 255, 255, .5) 92.15%);
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-}
+
 
 @layer utilities {
   .font-wide {
@@ -142,6 +132,18 @@
       "YTLC" 514, "YTUC" 712, "YTAS" 750,
       "YTDE" -203, "YTFI" 738;
   }
+
+    .gradient-heading {
+      font-family: var(--font-roboto-flex), sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(29px, 4.5vw, 104px) !important;
+      font-weight: 1000;
+      line-height: clamp(29px, 4.5vw, 104px) !important;
+      background: linear-gradient(85deg, #fff 0%, rgba(255, 255, 255, .5) 92.15%);
+      background-clip: text;
+      color: transparent;
+      text-align: center;
+    }
 }
 
 
