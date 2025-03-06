@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Bell, Star , Server, Crown, ChevronDown} from "lucide-react"
+import { Bell, Star , Server, Crown, ChevronDown, Menu, LucideMenu} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
@@ -26,6 +26,18 @@ export function NavBar() {
             </Link>
           </div>
         </div>
+        <div className="xl:hidden flex items-center gap-4">
+          <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+            <Bell className="h-5 w-5" />
+          </Button>
+          <Avatar className="h-9 w-9 ">
+              <AvatarImage src="https://cdn.discordapp.com/avatars/356092004859379713/0a8ee4a4688b2113b73fc8682cf44b82" alt="@denvercocode" />
+              <AvatarFallback>DC</AvatarFallback>
+          </Avatar>
+          <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+            <LucideMenu className="h-7 w-7" />
+          </Button>
+        </div>
         <div className="hidden xl:flex items-center gap-4">
           <div className="flex items-center gap-2 bg-top-light-2 p-1 rounded-md">
             <Button variant="outline" size="sm" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
@@ -40,6 +52,7 @@ export function NavBar() {
               <Crown className="h-2 w-2" />
               <span>Leaderboard</span>
             </Button>
+
           </div>
           <div className="flex items-center gap-2 bg-top-light-2 p-1 rounded-md">
             <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
