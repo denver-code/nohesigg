@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Flex, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Preloader from "@/components/preloader";
+import { ThemeProvider } from "@/components/theme-provider";
 
 
 const robotoFlex = Roboto_Flex({
@@ -33,7 +34,14 @@ export default function RootLayout({
         className={`${robotoFlex.variable} ${robotoMono.variable} antialiased`}
       >
         <Preloader/>
-        {children}
+          <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              // enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+          </ThemeProvider>
       </body>
     </html>
   );

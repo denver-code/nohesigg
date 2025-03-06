@@ -2,6 +2,21 @@ import Link from "next/link"
 import { Bell, Star , Server, Crown, ChevronDown, Menu, LucideMenu} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { Switch } from "@/components/ui/switch"
+
 
 export function NavBar() {
   return (
@@ -30,13 +45,46 @@ export function NavBar() {
           <Button variant="ghost" size="icon" className="border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
             <Bell className="h-4 w-4" />
           </Button>
-          <Avatar className="h-9 w-9 ">
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="font-bold text-sm non-italic justify-center whitespace-nowrap hover:text-white-300 ">
+              <Avatar className="h-9 w-9 ">
               <AvatarImage src="https://cdn.discordapp.com/avatars/356092004859379713/0a8ee4a4688b2113b73fc8682cf44b82" alt="@denvercocode" />
               <AvatarFallback>DC</AvatarFallback>
           </Avatar>
-          <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
-            <LucideMenu className="h-4 w-4" />
-          </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+
+              <DropdownMenuSeparator />
+              <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+         
+ 
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="font-bold text-sm border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300 p-2">
+             <LucideMenu className="h-4 w-4"/>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>  
+              <DropdownMenuLabel>Menu</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              
+              <DropdownMenuItem>Subscriptions</DropdownMenuItem>
+              <DropdownMenuItem>Servers</DropdownMenuItem>
+              <DropdownMenuItem>Leaderboard</DropdownMenuItem>
+              <DropdownMenuItem>About Us</DropdownMenuItem>
+              
+              <DropdownMenuSeparator />
+              <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         <div className="hidden xl:flex items-center gap-4">
           <div className="flex items-center gap-2 bg-top-light-2 p-1 rounded-md">
@@ -55,17 +103,48 @@ export function NavBar() {
 
           </div>
           <div className="flex items-center gap-2 bg-top-light-2 p-1 rounded-md">
-            <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
-            <Bell className="h-5 w-5" />
-          </Button>
-          <Button className="font-bold flex items-center gap-1.5 text-sm border lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-purple-600 hover:text-white-300 bg-purple-800  ">
-            <Avatar className="h-7 w-7 ">
-              <AvatarImage src="https://cdn.discordapp.com/avatars/356092004859379713/0a8ee4a4688b2113b73fc8682cf44b82" alt="@denvercocode" />
-              <AvatarFallback>DC</AvatarFallback>
-            </Avatar>
-            <span className="hidden text-sm font-bold sm:inline-block">denvercode</span>
-            <ChevronDown className="h-5 w-5" />
-          </Button>
+            <Popover>
+              <PopoverTrigger className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+                  <Bell className="h-5 w-5" />
+              </PopoverTrigger>
+              <PopoverContent>
+                <div className="grid gap-4 py-4">
+                    <div className="flex justify-between">
+                      <div className="flex items-center gap-2">
+                          <label htmlFor="unread-toggle" className="text-sm font-medium">
+                            Unread
+                          </label>
+                          <Switch id="unread-toggle" />
+                      </div>
+                      <Button variant="ghost" size="sm" >
+                        <span className="text-sm font-medium">Mark all as read</span>
+                      </Button>
+                    </div>
+                    <span className="text-sm text-muted-foreground text-center mt-5">
+                      No Notifications found
+                    </span>
+                  </div>
+              </PopoverContent>
+            </Popover>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="font-bold flex items-center gap-1.5 text-sm border lg:p-1 xl:p-1 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-purple-600 hover:text-white-300 bg-purple-800">
+              <Avatar className="h-7 w-7 ">
+                <AvatarImage src="https://cdn.discordapp.com/avatars/356092004859379713/0a8ee4a4688b2113b73fc8682cf44b82" alt="@denvercocode" />
+                <AvatarFallback>DC</AvatarFallback>
+              </Avatar>
+              <span className="hidden text-sm font-bold sm:inline-block">denvercode</span>
+              <ChevronDown className="h-5 w-5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           </div>
         </div>
       </div>

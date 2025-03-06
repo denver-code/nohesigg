@@ -25,7 +25,7 @@ export function HeroSection() {
             <p className="font-medium text-xl xs:text-lg text-center text-cyan-400">Enjoy monthly updates and exclusive content</p>
             <p className="font-medium text-xl xs:text-lg text-center">and see why nearly 1 million drivers are part of our community.</p>
           </div>
-          <Button className="mt-3 bg-purple-600 !px-7 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-purple-700 transition-all duration-500">
+          <Button className="mt-3 bg-purple-600 text-white !px-7 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-purple-700 transition-all duration-500">
             GET STARTED!
           </Button>
         </div>
