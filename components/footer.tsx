@@ -2,11 +2,13 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="mx-2 border border-border container-section rounded-xl px-6 py-5 bg-top-light-2 text-content-secondary">
-      <div className="grid grid-cols-6 text-sm">
+    <footer className="mx-2 border border-border rounded-xl px-6 py-5 bg-top-light-2 text-content-secondary">
+      <div className="flex flex-col md:flex-row text-sm justify-between items-center md:items-start">
         <div>
           <img className="2xl:h-20" src="/footer-logo.png" alt="cdn" />
         </div>
+        
+      <div className="flex gap-2 col-span-2">
         <div className="flex flex-col gap-1">
           <Link
             href="/about"
@@ -73,7 +75,9 @@ export function Footer() {
             Cookie Policy
           </Link>
         </div>
-        <div className="col-span-2 flex items-start justify-end gap-4.5">
+      </div>
+
+        <div className="col-span-2 flex items-start justify-end gap-4.5 mt-4 sm:mt-0">
           <a href="https://www.youtube.com/@NoHesiGG">
             <img
               className="h-6 w-6 2xl:w-8 2xl:h-8 opacity-50"
