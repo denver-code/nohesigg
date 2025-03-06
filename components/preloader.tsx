@@ -18,7 +18,7 @@ export default function Preloader() {
   if (!loading) return null
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black">
+    <div className="fixed inset-0 z-1000 flex items-center justify-center bg-black">
       <div className="relative h-32 w-32">
         <Image src="/loading_gif.gif" alt="Loading..." fill priority unoptimized className="object-contain" />
       </div>
