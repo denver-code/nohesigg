@@ -5,10 +5,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function NavBar() {
   return (
-    <header className="fixed top-0 right-0 left-0 z-[100] w-full">
-      <div className="sticky bg-top-dark-83 backdrop-blur-16 border border-gray-900 ml-9 mr-9 mt-5 rounded-xl flex items-center justify-between p-2 my-2 md:my-5 container-selection">
+    <header className="fixed top-0 left-0 right-0 z-50 h-8 p-2 flex flex-col gap-1">
+      <div className="sticky bg-top-dark-83 backdrop-blur-16 border border-gray-900 xl:mx-9 xl:mt-5 rounded-xl flex items-center justify-between p-2 my-2 container-selection">
         <div className="flex items-center lg:gap-2 xl:gap-4 2xl:gap-6">
-          <Link href="/" className="flex items-center gap-2 bg-white/5 p-3 px-5 rounded-md">
+          <Link href="/" className="flex items-center gap-2 bg-white/5 p-2 px-4 rounded-md">
           <img src="/NoHesiLogo.svg" alt="No Hesi" className="h-5" />
           </Link>
           <div className="hidden xl:flex items-center lg-gap-2 xl:gap-4 2xl:gap-6">
@@ -27,15 +27,15 @@ export function NavBar() {
           </div>
         </div>
         <div className="xl:hidden flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
-            <Bell className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+            <Bell className="h-4 w-4" />
           </Button>
           <Avatar className="h-9 w-9 ">
               <AvatarImage src="https://cdn.discordapp.com/avatars/356092004859379713/0a8ee4a4688b2113b73fc8682cf44b82" alt="@denvercocode" />
               <AvatarFallback>DC</AvatarFallback>
           </Avatar>
           <Button variant="ghost" size="icon" className="font-bold text-sm border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
-            <LucideMenu className="h-7 w-7" />
+            <LucideMenu className="h-4 w-4" />
           </Button>
         </div>
         <div className="hidden xl:flex items-center gap-4">
