@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="absolute z-20 top-0 left-0 right-0 h-full p-4 md:p-12 !pt-32 flex flex-col items-stretch gap-16 2xl:gap-28 3xl:gap-32">
+      <div className="absolute z-20 top-0 left-0 right-0 h-full p-4 md:p-12 !pt-58 flex flex-col items-stretch gap-16 2xl:gap-28 3xl:gap-32">
         <div className="flex flex-col gap-7 justify-center items-center lg:mt-14 xl:mt-24 4xl:mt-56">
           <h1 className="gradient-heading text-center font-wide">
             <span className="block">VIRTUAL STREETS</span>
