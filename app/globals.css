@@ -133,6 +133,10 @@
       "YTDE" -203, "YTFI" 738;
   }
 
+  .font-normal-wide{
+        font-variation-settings: "wdth" 151, "GRAD" 150, "slnt" 0, "XTRA" 603, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  }
+
     .gradient-heading {
       font-family: var(--font-roboto-flex), sans-serif;
       text-transform: uppercase;

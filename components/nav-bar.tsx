@@ -65,9 +65,6 @@ export function NavBar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-         
- 
-
           <DropdownMenu>
             <DropdownMenuTrigger className="font-bold text-sm border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300 p-2">
              <LucideMenu className="h-4 w-4"/>
