@@ -50,7 +50,9 @@ export default function SignIn() {
                 
             </div>
             <video className="z-20 w-full 4xl:w-4/5 mx-auto md:block hidden 4xl:col-span-2" autoPlay loop muted playsInline>
+                <source src="/welcome.mov" type="video/quicktime" />
                 <source src="/welcome.webm" type="video/webm" />
+                
                 Your browser does not support the video tag.
             </video>
         </div>

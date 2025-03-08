@@ -1,26 +1,9 @@
 import { NavBar } from "@/components/nav-bar"
-import { HeroSection } from "@/components/homepage/hero-section"
-import { AboutSection } from "@/components/homepage/about-section"
-import { ServersSection } from "@/components/homepage/servers-section"
-import { PlansSection } from "@/components/homepage/plans-section"
-import { ContactSection } from "@/components/homepage/contact-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { Separator } from "@radix-ui/react-dropdown-menu"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
 import { Crown, CarFront } from "lucide-react"
+import StatCard from "@/components/profile/stat-card"
 
 export default function SignIn() {
   return (
@@ -75,56 +58,128 @@ export default function SignIn() {
             Statistics
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  gap-4 p-3 border border-grey rounded-2xl">
-           <div className="flex flex-col justify-between gap-4 p-5 border rounded-2xl w-full bg-top-light-10 border-border-df">
-                <div className="flex gap-2 items-center">
-                    <CarFront className="h-5 w-5"/>
-                    <h1 className="text-sm font-semibold">
-                        Total Speed Achieved
-                    </h1>
-                </div>
-                <span className="text-2xl font-black font-normal-wide pt-3 pb-2">
-                    229 km/h
-                </span>
-            </div>  
-            <div className="flex flex-col justify-between gap-4 p-5 border rounded-2xl w-full bg-top-light-10 border-border-df">
-                <div className="flex gap-2 items-center">
-                    <CarFront className="h-5 w-5"/>
-                    <h1 className="text-sm font-semibold">
-                        Total Speed Achieved
-                    </h1>
-                </div>
-                <span className="text-2xl font-black font-normal-wide pt-3 pb-2">
-                    229 km/h
-                </span>
-            </div>  
-
-            <div className="flex flex-col justify-between gap-4 p-5 border rounded-2xl w-full bg-top-light-10 border-border-df">
-                <div className="flex gap-2 items-center">
-                    <CarFront className="h-5 w-5"/>
-                    <h1 className="text-sm font-semibold">
-                        Total Speed Achieved
-                    </h1>
-                </div>
-                <span className="text-2xl font-black font-normal-wide pt-3 pb-2">
-                    229 km/h
-                </span>
-            </div>  
-            <div className="flex flex-col justify-between gap-4 p-5 border rounded-2xl w-full bg-top-light-10 border-border-df">
-                <div className="flex gap-2 items-center">
-                    <CarFront className="h-5 w-5"/>
-                    <h1 className="text-sm font-semibold">
-                        Total Speed Achieved
-                    </h1>
-                </div>
-                <span className="text-2xl font-black font-normal-wide pt-3 pb-2">
-                    229 km/h
-                </span>
-            </div>  
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 p-3 border border-grey rounded-2xl">
+           <StatCard
+                icon={<CarFront className="h-5 w-5" />}
+                title="Total Speed Achieved"
+                value="229 km/h"
+                textColor="text-black text-gradient font-normal-wide uppercase"
+            />
+            <StatCard
+                icon={<CarFront className="h-5 w-5" />}
+                title="Distance Driven"
+                value="72 km"
+                textColor="text-black text-gradient font-normal-wide uppercase"
+            />
+            <StatCard
+                icon={<CarFront className="h-5 w-5" />}
+                title="Top Distance in one Session"
+                value="60 km"
+                textColor="text-black text-gradient font-normal-wide uppercase"
+            />
+            <StatCard
+                icon={<CarFront className="h-5 w-5" />}
+                title="Points Record (PB)"
+                value="42,108,656"
+                textColor="text-black text-gradient font-normal-wide uppercase"
+                bgColor="bg-red-bg-top"
+            />
+            
         </div>
 
-        
-        
+        <div className="flex flex-col sm:flex-row justify-between p-3 gap-4">
+           <div className="flex flex-col gap-4 sm:w-1/3">
+                <StatCard
+                icon={<CarFront className="h-5 w-5" />}
+                title="Total Crashes"
+                value="104"
+                textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Favorite Car"
+                    value="bmw m3 e92"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+           </div>
+            <div className="flex flex-col sm:w-2/3 gap-4 p-5 border border-grey rounded-2xl justify-between">
+                <div className="flex gap-2 items-center">
+                    <CarFront className="h-5 w-5" />
+                    <h1 className={`text-sm font-semibold text-white`}>Favourite Track</h1>
+                </div>
+                <span className="text-4xl font-black pt-3 pb-22 text-black text-gradient font-normal-wide uppercase">
+                    shuto revival project beta
+                </span>
+            </div>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-between p-3 gap-4">
+           <div className="flex flex-col gap-4 p-3 border border-grey rounded-2xl w-full">
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Total Time spent Drifting"
+                    value="00:00:09"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Top Time Drifting in one Session"
+                    value="00:00:08"
+                    textColor="text-black text-gradient font-normal-wide uppercase "
+                    bgColor="bg-green-bg-top"
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="All Time Close Calls in one Session"
+                    value="720"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+           </div>
+            <div className="flex flex-col gap-4 p-3 border border-grey rounded-2xl w-full">
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Total Time spent in Proximity"
+                    value="00:00:34"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Top Time spent in Proximity in one Session"
+                    value="00:00:15"
+                    textColor="text-black text-gradient font-normal-wide uppercase "
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="All Time Close Calls"
+                    value="846"
+                    textColor="text-black text-gradient font-normal-wide uppercase "
+                />
+           </div>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-between p-3 gap-4 mb-15">
+           <div className="flex flex-col gap-4 p-3 border border-grey rounded-2xl w-full">
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Total Time spent Drifting"
+                    value="00:00:09"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Top Time Drifting in one Session"
+                    value="00:00:08"
+                    textColor="text-black text-gradient font-normal-wide uppercase "
+                />
+           </div>
+            <div className="flex flex-col gap-4 p-3 border border-grey rounded-2xl w-full h-fit">
+                <StatCard
+                    icon={<CarFront className="h-5 w-5" />}
+                    title="Total Time spent in Proximity"
+                    value="00:00:34"
+                    textColor="text-black text-gradient font-normal-wide uppercase"
+                />
+           </div>
+        </div>        
+        <Footer/>
     </div>
   )
 }

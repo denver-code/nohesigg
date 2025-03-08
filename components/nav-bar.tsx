@@ -56,11 +56,11 @@ export function NavBar() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <Link href="/user/home">
+              <Link href="/user/home">
+              <DropdownMenuItem>  
                   Profile
-                </Link>
               </DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>Billing</DropdownMenuItem>
               <DropdownMenuItem>Subscription</DropdownMenuItem>
 
@@ -83,9 +83,11 @@ export function NavBar() {
               <DropdownMenuItem>About Us</DropdownMenuItem>
               
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href="/sign-in">
-                  Sign in
-                </Link></DropdownMenuItem>
+                <Link href="/sign-in">
+                  <DropdownMenuItem>
+                      Sign in
+                    </DropdownMenuItem>
+                </Link>
               <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -142,15 +144,19 @@ export function NavBar() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href="/user/home">
-                  Profile
-                </Link></DropdownMenuItem>
+              <Link href="/user/home">
+                <DropdownMenuItem>
+                    Profile
+                </DropdownMenuItem>
+                </Link>
               <DropdownMenuItem>Billing</DropdownMenuItem>
               <DropdownMenuItem>Subscription</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><Link href="/sign-in">
-                  Sign in
-                </Link></DropdownMenuItem>
+              <Link href="/sign-in">
+                <DropdownMenuItem>
+                    Sign in
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
