@@ -56,7 +56,11 @@ export function NavBar() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/user/home">
+                  Profile
+                </Link>
+              </DropdownMenuItem>
               <DropdownMenuItem>Billing</DropdownMenuItem>
               <DropdownMenuItem>Subscription</DropdownMenuItem>
 
@@ -79,6 +83,9 @@ export function NavBar() {
               <DropdownMenuItem>About Us</DropdownMenuItem>
               
               <DropdownMenuSeparator />
+              <DropdownMenuItem><Link href="/sign-in">
+                  Sign in
+                </Link></DropdownMenuItem>
               <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -135,10 +142,15 @@ export function NavBar() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem><Link href="/user/home">
+                  Profile
+                </Link></DropdownMenuItem>
               <DropdownMenuItem>Billing</DropdownMenuItem>
               <DropdownMenuItem>Subscription</DropdownMenuItem>
               <DropdownMenuSeparator />
+              <DropdownMenuItem><Link href="/sign-in">
+                  Sign in
+                </Link></DropdownMenuItem>
               <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
