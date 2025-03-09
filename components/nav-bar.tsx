@@ -81,7 +81,9 @@ export function NavBar() {
               
               <DropdownMenuItem>Subscriptions</DropdownMenuItem>
               <DropdownMenuItem>Servers</DropdownMenuItem>
-              <DropdownMenuItem>Leaderboard</DropdownMenuItem>
+              <Link href="/leaderboard">
+                <DropdownMenuItem>Leaderboard</DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>About Us</DropdownMenuItem>
               
               <DropdownMenuSeparator />
@@ -104,10 +106,12 @@ export function NavBar() {
               <Server className="h-2 w-2" />
               <span>Servers</span>
             </Button>
-            <Button variant="outline" size="sm" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+            <Link href="/leaderboard">
+              <Button variant="outline" size="sm" className="font-bold text-sm border bg-top-light-2 lg:p-1 xl:p-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
               <Crown className="h-2 w-2" />
               <span>Leaderboard</span>
             </Button>
+            </Link>
 
           </div>
           <div className="flex items-center gap-2 bg-top-light-2 p-1 rounded-md">
