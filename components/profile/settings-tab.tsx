@@ -3,6 +3,15 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "../ui/button"
 import Link from "next/link"
 import { Switch } from "../ui/switch"
+import { Info } from "lucide-react"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { Label } from "../ui/label"
+import { Input } from "../ui/input"
 
 export function SettingsTab() {
     return (
@@ -83,8 +92,65 @@ export function SettingsTab() {
                     </div>
                 </TabsContent>
 
-                <TabsContent value="settings">
-                    Test
+                <TabsContent value="basic-information">
+                    <div className="flex flex-col gap-4 p-5 border border-grey rounded-2xl justify-between">
+                        <div className="flex justify-between items-center">
+                            <h1 className="text-2xl font-bold">
+                                Basic Information
+                            </h1>   
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger>
+                                    <Info className="w-5 h-5" />
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                    <p>Username changes are limited to once every two weeks.</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
+
+                        </div>
+                        <p className="text-muted-foreground text-sm">
+                            These personal details are private and will not be displayed to other users.
+                        </p>
+                        <div className="flex flex-col gap-2 justify-center items-end">
+                            <div className="flex gap-2 w-full flex-col sm:flex-row">
+                                <div className="grid w-full items-center gap-1.5">
+                                    <Label htmlFor="firstname">First Name</Label>
+                                    <Input type="firstname" id="firstname" className="py-6" placeholder="John" value="I**r"/>
+                                </div>
+                                <div className="grid w-full items-center gap-1.5">
+                                    <Label htmlFor="lastname">Last Name</Label>
+                                    <Input type="lastname" id="lastname" className="py-6" placeholder="Doe" value="S*****o"/>
+                                </div>
+                            </div>
+                            <Button disabled className="bg-purple-600 text-white !px-7 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-purple-700 transition-all duration-500">
+                                Save
+                            </Button>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-2 w-full items-end">
+                            <div className="grid w-full items-center gap-1.5">
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="username" id="username" className="py-6 pl-3 font-bold"  placeholder="John" value="denvercode"/>
+                            </div>
+                            <Button disabled variant="outline" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-gray-700 transition-all duration-500">
+                                Change username
+                            </Button>
+                        </div>
+                        <div className="flex flex-col">
+                            <div className="flex flex-col sm:flex-row gap-2 w-full items-end">
+                                <div className="grid w-full items-center gap-1.5">
+                                    <Label htmlFor="email">Email</Label>
+                                    <Input type="email" id="email" className="py-6 pl-3 font-bold"  placeholder="example@me.com"/>
+                                </div>
+                                <Button disabled variant="outline" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-gray-700 transition-all duration-500">
+                                    Change email
+                                </Button>
+                            </div>
+                            <span className="text-muted-foreground text-sm pt-2">Active email: cs******@gmail.com</span>
+                        </div>
+                            
+                    </div>
                 </TabsContent>
             </Tabs>
         </div>
