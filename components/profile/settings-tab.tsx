@@ -117,11 +117,11 @@ export function SettingsTab() {
                             <div className="flex gap-2 w-full flex-col sm:flex-row">
                                 <div className="grid w-full items-center gap-1.5">
                                     <Label htmlFor="firstname">First Name</Label>
-                                    <Input type="firstname" id="firstname" className="py-6" placeholder="John" value="I**r"/>
+                                    <Input type="firstname" id="firstname" className="py-6" placeholder="John"/>
                                 </div>
                                 <div className="grid w-full items-center gap-1.5">
                                     <Label htmlFor="lastname">Last Name</Label>
-                                    <Input type="lastname" id="lastname" className="py-6" placeholder="Doe" value="S*****o"/>
+                                    <Input type="lastname" id="lastname" className="py-6" placeholder="Doe"/>
                                 </div>
                             </div>
                             <Button disabled className="bg-purple-600 text-white !px-7 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-purple-700 transition-all duration-500">
@@ -131,7 +131,7 @@ export function SettingsTab() {
                         <div className="flex flex-col sm:flex-row gap-2 w-full items-end">
                             <div className="grid w-full items-center gap-1.5">
                                 <Label htmlFor="username">Username</Label>
-                                <Input type="username" id="username" className="py-6 pl-3 font-bold"  placeholder="John" value="denvercode"/>
+                                <Input type="username" id="username" className="py-6 pl-3 font-bold"  placeholder="John"/>
                             </div>
                             <Button disabled variant="outline" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-gray-700 transition-all duration-500">
                                 Change username
@@ -161,8 +161,8 @@ export function SettingsTab() {
                         </h1>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-col p-2 border border-grey rounded-2xl justify-between">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex flex-col sm:flex-row justify-start items-center gap-3">
+                                <div className="flex justify-between sm:items-center">
+                                    <div className="flex flex-col sm:flex-row justify-start xs:items-center gap-3">
                                         <img src="/user-profile-steam.svg" alt="Steam Icon" className="w-10" />
                                         <div className="flex flex-col justify-start items-start"> 
                                             <h1 className="text-xl font-black italic font-normal-wide">
@@ -184,8 +184,8 @@ export function SettingsTab() {
                             </div>
 
                             <div className="flex flex-col p-2 border border-grey rounded-2xl justify-between">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex flex-col sm:flex-row justify-start items-center gap-3">
+                                <div className="flex justify-between sm:items-center">
+                                    <div className="flex flex-col sm:flex-row justify-start xs:items-center gap-3">
                                         <img src="/user-profile-discord.svg" alt="Discord Icon" className="w-10" />
                                         <div className="flex flex-col justify-start items-start"> 
                                             <h1 className="text-xl font-black italic font-normal-wide">
