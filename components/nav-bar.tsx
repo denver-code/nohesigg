@@ -42,9 +42,11 @@ export function NavBar() {
           </div>
         </div>
         <div className="xl:hidden flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
-            <Bell className="h-4 w-4" />
-          </Button>
+          <Link href="/notifications">
+            <Button variant="ghost" size="icon" className="border bg-top-light-2 border-border-df text-content-secondary rounded-sm  non-italic transition-all duration-300 justify-center whitespace-nowrap hover:bg-top-light-17 hover:text-white-300">
+              <Bell className="h-4 w-4" />
+            </Button>
+          </Link>
 
           <DropdownMenu>
             <DropdownMenuTrigger className="font-bold text-sm non-italic justify-center whitespace-nowrap hover:text-white-300 ">

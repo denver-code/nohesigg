@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ProfileTab } from "@/components/profile/profile-tab"
 import { Settings } from "lucide-react"
 import { SettingsTab } from "@/components/profile/settings-tab"
+import { FriendsTab } from "@/components/profile/friends-tab"
 
 export default function SignIn() {
   return (
@@ -13,6 +14,7 @@ export default function SignIn() {
             <TabsList className="w-full mb-8">
                 <TabsTrigger value="profile">Profile</TabsTrigger>
                 <TabsTrigger value="settings">Settings</TabsTrigger>
+                <TabsTrigger value="friends">Friends</TabsTrigger>
             </TabsList>
 
             <TabsContent value="profile">
@@ -21,6 +23,10 @@ export default function SignIn() {
 
             <TabsContent value="settings">
                 <SettingsTab/>
+            </TabsContent>
+
+            <TabsContent value="friends">
+                <FriendsTab/>
             </TabsContent>
         </Tabs>
 

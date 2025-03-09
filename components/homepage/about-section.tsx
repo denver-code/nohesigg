@@ -17,8 +17,8 @@ export function AboutSection() {
 
   return (
     <section className="container mx-auto py-20 px-3" id="about">
-      <div className="flex flex-col justify-center items-start sm:flex-row sm:justify-between mb-12">
-        <h2 className="gradient-heading !text-left !capitalize !font-semibold pb-4 md:pb-0">
+      <div className="flex flex-col justify-center items-center sm:items-start sm:flex-row sm:justify-between mb-12">
+        <h2 className="gradient-heading sm:!text-left !capitalize !font-semibold pb-4 md:pb-0">
           No Hesi is a<br />
           Global Community
         </h2>
