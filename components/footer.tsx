@@ -113,7 +113,7 @@ export function Footer() {
           href="/terms-of-use"
           className="border-t mt-5 pt-5 w-full block max-w-screen-3xl mx-auto border-border text-sm"
         >
-          NoHesi<span>™</span> 2024. All rights reserved.
+          NoHesi<span>™</span> 2025. All rights reserved.
         </Link>
       </div>
     </footer>
