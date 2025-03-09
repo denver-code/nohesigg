@@ -152,6 +152,64 @@ export function SettingsTab() {
                             
                     </div>
                 </TabsContent>
+
+
+                <TabsContent value="social-links">
+                    <div className="flex flex-col gap-4 p-5 border border-grey rounded-2xl justify-between">
+                        <h1 className="text-2xl font-bold">
+                            Social Links
+                        </h1>
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-col p-2 border border-grey rounded-2xl justify-between">
+                                <div className="flex justify-between items-center">
+                                    <div className="flex flex-col sm:flex-row justify-start items-center gap-3">
+                                        <img src="/user-profile-steam.svg" alt="Steam Icon" className="w-10" />
+                                        <div className="flex flex-col justify-start items-start"> 
+                                            <h1 className="text-xl font-black italic font-normal-wide">
+                                                Steam
+                                            </h1>
+                                            <span className="text-muted-foreground text-md font-semibold">
+                                                Antvez
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <Button variant="outline" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-gray-700 transition-all duration-500">
+                                        DE-LINK
+                                    </Button>
+                                </div>
+                                <div className="flex justify-between gap-4 pt-2 items-center font-bold text-lg">
+                                    <span>Show on profile page</span>
+                                    <Switch />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col p-2 border border-grey rounded-2xl justify-between">
+                                <div className="flex justify-between items-center">
+                                    <div className="flex flex-col sm:flex-row justify-start items-center gap-3">
+                                        <img src="/user-profile-discord.svg" alt="Discord Icon" className="w-10" />
+                                        <div className="flex flex-col justify-start items-start"> 
+                                            <h1 className="text-xl font-black italic font-normal-wide">
+                                                Discord
+                                            </h1>
+                                            <span className="text-muted-foreground text-md font-semibold">
+                                                denvercode
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <Button variant="outline" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-gray-700 transition-all duration-500">
+                                        DE-LINK
+                                    </Button>
+                                </div>
+                                <div className="flex justify-between gap-4 pt-2 items-center font-bold text-lg">
+                                    <span>Show on profile page</span>
+                                    <Switch />
+                                </div>
+                            </div>
+                            
+                        </div>
+                            
+                    </div>
+                </TabsContent>
             </Tabs>
         </div>
     )
