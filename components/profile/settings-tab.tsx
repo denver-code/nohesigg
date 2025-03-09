@@ -205,9 +205,40 @@ export function SettingsTab() {
                                     <Switch />
                                 </div>
                             </div>
-                            
                         </div>
-                            
+                    </div>
+                </TabsContent>
+
+                <TabsContent value="marketing">
+                    <div className="flex flex-col gap-4 p-5 border border-grey rounded-2xl justify-between">
+                        <h1 className="text-2xl font-bold">
+                            Notifications
+                        </h1>
+                        <div className="flex justify-between gap-4 pt-2 items-center font-bold text-lg">
+                            <span>Unsubscribe from all marketing emails</span>
+                            <Switch />
+                        </div>
+                    </div>
+                </TabsContent>
+
+                <TabsContent value="other-settings">
+                    <div className="flex flex-col gap-4 p-5 border border-grey rounded-2xl justify-between">
+                        <h1 className="text-2xl font-bold">
+                            Other Settings
+                        </h1>
+                        <div className="flex flex-col sm:flex-row justify-between pt-2 items-start sm:items-center">
+                            <div className="flex flex-col gap-1">
+                                <h1 className="text-lg font-bold">
+                                    Deactivate my account
+                                </h1>
+                                <p className="text-red-400 text-md font-semibold">
+                                    Warning! This action cannot be cancelled!
+                                </p>
+                            </div>
+                            <Button variant="destructive" className="text-white !px-4 !py-6 text-lg font-black uppercase font-roboto italic hover:bg-red-600 transition-all duration-500">
+                                Deactivate
+                            </Button>
+                        </div>
                     </div>
                 </TabsContent>
             </Tabs>
